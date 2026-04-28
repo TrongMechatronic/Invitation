@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduation Invitation - Le Minh Trong</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:ital,wght@1,600&display=swap');
+
+        :root {
+            --bg-color: #fce4ec; 
+            --terminal-bg: #1a1a1a;
+            --hust-red: #da251d;
+            --pcb-green: #026602;
+            --pcb-trace: #014401;
+            --text-terminal: #58a6ff;
+            --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
+            --font-soft: 'Dancing Script', cursive;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: var(--font-mono);
+        }
+
+        .terminal-header {
+            width: 100%;
+            background-color: var(--hust-red);
+            color: white;
+            padding: 8px 20px;
+            font-size: 0.7em;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .welcome-section {
+            text-align: center;
+            padding: 40px 20px 10px 20px;
+        }
+
+        .welcome-title {
+            font-family: var(--font-soft);
+            font-size: 3rem;
+            color: var(--hust-red);
+            margin: 0;
+        }
+
+        .invitation-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 4rem;
+            color: #555;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end; /* Logo về bên phải */
+            padding: 10px 40px;
+            box-sizing: border-box;
+        }
+
+        header img { height: 180px; width: auto; } /* To gấp ~4 lần */
+
+        .main-container {
+            width: 80%;
+            max-width: 1000px;
+            padding-bottom: 60px;
+        }
+
+        .photo-frame {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--pcb-green);
+            background-image: 
+                linear-gradient(var(--pcb-trace) 1px, transparent 1px),
+                linear-gradient(90deg, var(--pcb-trace) 1px, transparent 1px);
+            background-size: 25px 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .photo-frame img { width: 100%; border-radius: 4px; display: block; }
+
+        .data-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .info-box {
+            background-color: var(--terminal-bg);
+            color: #e6edf3;
+            padding: 20px;
+            border-radius: 6px;
+            border-bottom: 3px solid var(--hust-red);
+        }
+
+        .label {
+            color: var(--text-terminal);
+            font-size: 0.75em;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        /* Thết lập bảng lịch giống như ảnh */
+        .mini-calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px 5px;
+            text-align: center;
+            font-size: 0.85em;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        .day-active {
+            color: var(--hust-red);
+            font-weight: bold;
+            border: 1px solid var(--hust-red);
+            border-radius: 3px;
+        }
+
+        .value-line {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            background-color: var(--text-terminal);
+            margin-left: 5px;
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            from, to { background-color: transparent; }
+            50% { background-color: var(--text-terminal); }
+        }
+
+        .contact-section {
+            margin-top: 25px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 6px;
+            font-size: 0.85em;
+        }
+
+        .ps-section {
+            margin-top: 40px;
+            font-style: italic;
+            color: #666;
+            text-align: center;
+        }
+
+        .no-italic { font-style: normal; }
+
+        @media (max-width: 768px) {
+            .main-container { width: 95%; }
+            .data-boxes { grid-template-columns: 1fr; }
+            header img { height: 100px; }
+            .invitation-subtitle { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="terminal-header">
+        > #from_Le_Minh_Trong | #To_$Friend$_and_$Family$
+    </div>
+
+    <header>
+        <img src="Logo.png" alt="HUST Logo">
+    </header>
+
+    <div class="welcome-section">
+        <div class="welcome-title">Welcome to my Graduation</div>
+        <div class="invitation-subtitle">Invitation</div>
+    </div>
+
+    <div class="main-container">
+        
+        <div class="photo-frame">
+            <img src="LMT.png" alt="Le Minh Trong">
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <span style="color: var(--hust-red); font-weight: bold; font-size: 1.5em;">LÊ MINH TRỌNG</span><br>
+            <span style="color: #555; font-size: 0.9em; letter-spacing: 1px;">// KỸ THUẬT CƠ ĐIỆN TỬ</span>
+        </div>
+
+        <div class="data-boxes">
+            <div class="info-box">
+                <div class="label"># DATE_TIME_MAY_2026</div>
+                <div class="value-line">Time: 14:00 PM</div>
+                <div class="value-line">Saturday - 05/2026</div>
+                
+                <div class="mini-calendar">
+                    <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thus</span><span>Fri</span><span>Sat</span>
+                    <span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span class="day-active">9</span>
+                    <span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
+                    <span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span>
+                    <span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="label"># LOCATION</div>
+                <div class="value-line">Tenth Floor, Ta Quang Buu Library, Hanoi University of Science and Technology</div>
+                <div class="value-line">Hội trường tầng 10, Thư viện Tạ Quang Bửu, Đại học Bách khoa Hà Nội<span class="cursor"></span></div>
+                
+                <a href="https://www.google.com/maps/place/Th%C6%B0+vi%E1%BB%87n+T%E1%BA%A1+Quang+B%E1%BB%ADu/@21.0044376,105.8422308,17.5z/data=!4m6!3m5!1s0x3135ac76e3624a59:0x4f3ae5ee12bfcc19!8m2!3d21.0044106!4d105.8439888!16s%2Fg%2F1hf2wfffd?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="color: #3fb950; font-size: 0.8em; text-decoration: none; display: inline-block; margin-top: 15px; border: 1px solid #3fb950; padding: 5px 10px; border-radius: 4px;">
+                    [ OPEN_GPS_MAPS ]
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <div style="color: var(--hust-red); margin-bottom: 5px; font-weight: bold;">// CONNECT_WITH_ME</div>
+            <div>Mobile: 0867-032-467</div>
+            <div>Email: trong.lm216257@sis.hust.edu.vn<span class="cursor" style="background-color: var(--hust-red);"></span></div>
+        </div>
+
+        <div class="ps-section">
+            "Sự hiện diện của mọi người là vinh hạnh của tui. Do đó kính mong mọi người chỉ cần người đến tham gia không mang theo thức gì khác. "Mang theo = chặt tay nha" <span class="no-italic">😉😉😉</span>"
+            <div style="margin-top: 10px; font-size: 0.8em; color: #999;">-- end of script --</div>
+        </div>
+    </div>
+
+</body>
+</html>
